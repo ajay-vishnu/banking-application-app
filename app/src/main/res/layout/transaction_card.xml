@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/transactionCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        app:cardCornerRadius="10dp"
+        android:outlineSpotShadowColor="#00000000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp">
+
+            <TextView
+                android:id="@+id/transactionType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:maxWidth="180dp"
+                android:padding="10dp"
+                tools:text="Received"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/transactionMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:maxLength="26"
+                android:maxHeight="45dp"
+                android:maxWidth="260dp"
+                android:textStyle="italic"
+                tools:text="For rent"
+                android:layout_below="@id/transactionType"/>
+
+            <TextView
+                android:id="@+id/transactionAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/avenir_next"
+                android:maxWidth="100dp"
+                tools:text="-500"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/transactionCardExpanded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        app:cardCornerRadius="10dp"
+        android:outlineSpotShadowColor="#00000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp">
+
+            <TextView
+                android:id="@+id/transactionTypeExpanded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:maxWidth="180dp"
+                android:padding="10dp"
+                tools:text="Received"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relativeDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_below="@+id/transactionTypeExpanded">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/transaction_date"
+                            android:fontFamily="@font/avenir_next"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue"/>
+
+                        <TextView
+                            android:id="@+id/transactionDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Wed Mar 27 08:22:02 IST 2015"
+                            android:fontFamily="@font/avenir_next"
+                            android:textStyle="normal"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/transferType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_next"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue"
+                            tools:text="Received From:"/>
+
+                        <TextView
+                            android:id="@+id/transferName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_next"
+                            android:textStyle="normal"
+                            android:textColor="@color/black"
+                            tools:text="Aprameya L"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_next"
+                            android:text="@string/transaction_id"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/transactionId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_next"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            tools:text="546213465498" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_next"
+                            android:text="@string/account_balance"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/balanceAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_next"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            tools:text="50000" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/messageLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_below="@+id/relativeDetails"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/messageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/message"
+                    android:fontFamily="@font/avenir_next"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/transactionMessageExpanded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_next"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:maxLength="26"
+                    android:maxHeight="25dp"
+                    android:maxWidth="260dp"
+                    android:textStyle="italic"
+                    android:layout_marginBottom="5dp"
+                    tools:text="For rent" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/transactionAmountExpanded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/avenir_next"
+                android:maxWidth="100dp"
+                tools:text="-500"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

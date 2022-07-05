@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Banking Application</string>
+    <string name="transaction_id">Transaction ID:</string>
+    <string name="transaction_date">Transaction Date:</string>
+    <string name="account_balance">Account Balance:</string>
+    <string name="message">Message:</string>
+</resources>
